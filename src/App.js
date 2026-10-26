@@ -8,7 +8,6 @@ import Socials from './components/Socials';
 import Tutorials from './components/Tutorials';
 import Gallery from './components/Gallery';
 import { AdminProvider } from './api';
-import logo from './components/logo.jpg';
 import './styles.css';
 
 const tabs = [
@@ -44,7 +43,7 @@ function App() {
         <AdminBar />
 
         <header className="header">
-          <img src={logo} alt="Logo" className="logo" />
+          <div className="logo" aria-hidden="true">TFG</div>
           <h1 className="title">TheFanartGuy</h1>
         </header>
 

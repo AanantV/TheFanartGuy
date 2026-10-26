@@ -155,12 +155,19 @@ body {
 }
 
 .logo {
+  display: grid;
+  place-items: center;
   width: 56px;
   height: 56px;
   margin-right: 14px;
   border-radius: 8px;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 900;
+  font-size: .95rem;
+  letter-spacing: 1px;
+  color: #fff;
+  background: linear-gradient(135deg, var(--rog-red), var(--rog-magenta) 52%, var(--rog-cyan));
   box-shadow: 0 0 14px rgba(255, 23, 68, 0.6);
-  object-fit: cover;
 }
 
 .title {
