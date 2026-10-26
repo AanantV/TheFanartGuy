@@ -8,6 +8,7 @@ import Socials from './components/Socials';
 import Tutorials from './components/Tutorials';
 import Gallery from './components/Gallery';
 import { AdminProvider } from './api';
+import logoImage from './components/logo.jpg';
 import './styles.css';
 
 const tabs = [
@@ -33,9 +34,6 @@ function App() {
         <div className="side-rail side-rail-left">
           <span className="rail-text">TheFanartGuy</span>
         </div>
-        <div className="side-rail side-rail-right">
-          <span className="rail-text">Fanart Wallpapers Art</span>
-        </div>
       </div>
 
       <div className="app-container">
@@ -43,7 +41,7 @@ function App() {
         <AdminBar />
 
         <header className="header">
-          <div className="logo" aria-hidden="true">TFG</div>
+          <img className="logo" src={logoImage} alt="TheFanartGuy logo" />
           <h1 className="title">TheFanartGuy</h1>
         </header>
 

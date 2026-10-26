@@ -124,6 +124,24 @@ export function AdminItemControls({ collection, item, index, vertical = true }) 
   );
 }
 
+/** Opens the shared editor for a new item. Visitors never see admin controls. */
+export function AddItemButton({ collection, label = 'Add item' }) {
+  if (!collection.isAdmin) return null;
+
+  return (
+    <div className="collection-add">
+      <button
+        type="button"
+        className="btn btn-primary"
+        onClick={() => collection.setEditingId('new')}
+        disabled={collection.editingId != null}
+      >
+        {label}
+      </button>
+    </div>
+  );
+}
+
 /** Shows an image or video. */
 export function ItemMedia({ url, type, alt, className = 'work-media', videoProps = {} }) {
   if (!url) return null;
